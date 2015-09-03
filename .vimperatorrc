@@ -1,0 +1,267 @@
+
+" clear all key mappings
+" to avoid troubles from loading rc file several times
+mapclear
+cmapclear
+imapclear
+
+" set the mapleader key
+let mapleader = "."
+let g:mapleader = "."
+
+" tell the bell to go beep itself!
+set visualbell
+
+" -----------------------------------------------------------------
+" Searching
+" -----------------------------------------------------------------
+" find as you type
+set incsearch
+" highlight the terms
+set hlsearch
+" make searches case-insensitive
+set ignorecase
+" unless they contain upper-case letters
+set smartcase
+" a toggle for search highlight
+noremap <silent> S :set hlsearch!<CR>
+
+" get rid of the tab bar, that is valuable space!
+"set showtabline=0
+
+" Don't go into insert mode when loading a page
+set focuscontent
+
+" smooth scroll setting
+"let g:smooziee_scroll_amount="200"
+"let g:smooziee_scroll_interval="250"
+noremap j 3j
+noremap k 3k
+
+noremap w 10h
+noremap e 10l
+
+noremap , /
+
+noremap <C-k> gt
+noremap <C-j> gT
+
+" It is easier for me to click C-h rather than M-h to move back and forth
+noremap <C-h> H
+noremap <C-l> L
+
+noremap 0 g0
+noremap $ g$
+
+noremap R :restart<cr>
+noremap Q :xall<cr>
+noremap v ;F
+noremap T :tabduplicate<cr>
+
+" Move the current tab
+noremap <M-h> <Esc>:tabmove! -1<CR>
+noremap <M-l> <Esc>:tabmove! +1<CR>
+
+" show the available tabs
+noremap b :buffer!
+
+" turn off the freakin' bell
+hi Bell display: none;
+
+
+" completion priority in :[tab]open
+" bookmarks, suggestions, awesome bar
+" set complete=bSl
+set complete=lt
+
+" Miscellaneous
+set history=50
+
+" only show 5 suggestions
+set maxitems=5
+
+" keep messages around for 2 seconds
+set messagetimeout=2000
+
+" DuckDuckGo search
+" set defsearch=duckduckgo
+
+" set the right hintchars
+set hc=jfkdlsawoeicmghqpz
+
+" don't always focus the content
+set nofocuscontent
+
+" title shouldn't be Vimperator
+set titlestring="Firefox"
+
+" animations off
+" set animations=false
+
+" hide stuff in the GUI
+set toolbars=noaddons,menu,navigation,tabs
+
+" stay in insert mode
+nnoremap I <S-Esc>
+
+" show link destination in status line
+set showstatuslinks=1
+
+
+" hint styles
+hi Hint font-family: sans-serif; font-size: 10px; font-weight: bold; text-transform: uppercase; color: black; background: #f0f0f0; border: 1px solid #ddd; padding: .25em .5em; margin-top: -.25em; margin-left: -.5em; border-radius: 5px; text-shadow: 0 1px 0 #fff;
+hi HintElem nothing: yes;
+
+" other styles
+hi Normal font-family: Inconsolata, Consolas, Monaco, monospace; font-size: 16px; background: white; color: black;
+hi CmdLine>* font-family: Inconsolata, Consolas, Monaco, monospace; font-size: 14px;
+set ani
+
+" Greasemonkey
+" ------------
+
+" operate in complete darkness and evil
+set! extensions.greasemonkey.stats.optedin=false
+
+" shut up
+set! extensions.greasemonkey.installDelay=1
+set! extensions.greasemonkey.stats.prompted=true
+
+" Ghostery
+" --------
+
+" we've already gone through the tutorial
+set! extensions.ghostery.tutorial=true
+
+" make Ghostery more ghostlike
+set! extensions.ghostery.showBubble=false
+set! extensions.ghostery.showBugCount=false
+set! extensions.ghostery.showClick2Play=false
+set! extensions.ghostery.showClick2PlayButton=false
+set! extensions.ghostery.toolbarButton=false
+
+" autoupdate bugs and stuff
+set! extensions.ghostery.updateNotification=false
+set! extensions.ghostery.autoUpdateBugs=true
+
+" other blockings
+set! extensions.ghostery.cookieProtect=true
+set! extensions.ghostery.enableCleanup=true
+set! extensions.ghostery.blockFrame=true
+set! extensions.ghostery.blockImage=true
+set! extensions.ghostery.blockObject=true
+set! extensions.ghostery.preventRedirect=false
+set! extensions.ghostery.blockingMode=0
+
+" Tree Style Tab
+" --------------
+
+" tab display
+set! extensions.treestyletab.twisty.style="sidebar"
+set! extensions.treestyletab.tabbar.invertTabContents=false
+
+" no indent
+" set! extensions.treestyletab.maxTreeLevel.vertical=0
+
+" omnipresent tabs
+" set! extensions.treestyletab.tabbar.autoHide.mode=0
+" set! extensions.treestyletab.tabbar.autoHide.mode.fullscreen=0
+
+" vertical tabs
+set! extensions.treestyletab.autoAttach.duplicateTabCommand=0
+set! extensions.treestyletab.autoAttach.duplicateTabCommand.back=0
+set! extensions.treestyletab.autoAttach.duplicateTabCommand.forward=0
+set! extensions.treestyletab.autoAttach.fromCurrent=1
+set! extensions.treestyletab.autoAttach.goButton=0
+set! extensions.treestyletab.autoAttach.newTabButton=0
+set! extensions.treestyletab.autoAttach.newTabCommand=0
+set! extensions.treestyletab.autoAttach.searchResult=0
+
+" drop links like it's hot
+set! extensions.treestyletab.dropLinksOnTab.behavior=2
+
+" context items
+set! extensions.treestyletab.show.context-item-bookmarkTabSubtree=false
+set! extensions.treestyletab.show.context-item-collapseAllSubtree=false
+set! extensions.treestyletab.show.context-item-expandAllSubtree=false
+set! extensions.treestyletab.show.context-item-reloadDescendantTabs=false
+set! extensions.treestyletab.show.context-item-reloadTabSubtree=true
+set! extensions.treestyletab.show.context-item-removeAllTabsButThisTree=false
+set! extensions.treestyletab.show.context-item-removeDescendantTabs=true
+set! extensions.treestyletab.show.context-item-removeTabSubtree=true
+set! extensions.treestyletab.show.context-item-toggleAutoHide=false
+set! extensions.treestyletab.show.context-item-toggleFixed=false
+
+" no collapsing
+set! extensions.treestyletab.allowSubtreeCollapseExpand.horizontal=false
+set! extensions.treestyletab.allowSubtreeCollapseExpand.vertical=false
+
+" NoScript and forbidden things
+" -----------------------------
+
+" what is forbidden?
+set! noscript.forbidBookmarklets=true
+set! noscript.forbidFrames=true
+set! noscript.forbidIFrames=true
+set! noscript.forbidSilverlight=true
+set! noscript.noping=true
+set! noscript.nosniff=true
+set! security.enable_java=false
+set! browser.frames.enabled=false
+set! browser.formfill.enable=false
+set! toolkit.telemetry.enabled=false
+set! datareporting.healthreport.uploadEnabled=false
+set! social.enabled=false
+set! social.remote-install.enabled=false
+set! social.sidebar.open=false
+set! social.toast-notifications.enabled=false
+set! social.whitelist=
+set! plugins.click_to_play=true
+set! plugin.state.googletalkbrowserplugin=0
+set! plugin.state.java=0
+set! plugin.state.npgtpo3dautoplugin=0
+set! plugin.state.o1dbrowserplugin=0
+set! plugin.state.onlivegameclientdetector=0
+
+" what is allowed? javascript, ironically
+set! noscript.global=true
+set! noscript.forbidFlash=false
+set! noscript.forbidFonts=false
+set! noscipt.forbidMedia=false
+set! noscript.forbidWebGL=false
+
+" goodbye, ABE
+set! noscript.ABE.enabled=false
+
+" don't prevent clickjacking on trusted sites
+set! noscript.clearClick=1
+
+" what's in the context menu?
+set! noscript.showAbout=false
+set! noscript.showAddress=false
+set! noscript.showAllowPage=true
+set! noscript.showBaseDomain=true
+set! noscript.showBlankSources=false
+set! noscript.showBlockedObjects=false
+set! noscript.showDistrust=true
+set! noscript.showDomain=false
+set! noscript.showExternalFilters=true
+set! noscript.showGlobal=false
+set! noscript.showPermanent=true
+set! noscript.showPlaceholder=true
+set! noscript.showRecentlyBlocked=false
+set! noscript.showRevokeTemp=false
+set! noscript.showTemp=true
+set! noscript.showTempAllowPage=true
+set! noscript.showTempToPerm=false
+set! noscript.showUntrusted=true
+set! noscript.showUntrustedPlaceholder=true
+
+" shut up
+set! noscript.notify=false
+set! noscript.notify.bottom=false
+set! noscript.clearClick.prompt=false
+set! noscript.sound=false
+set! noscript.ABE.notify=false
+set! noscript.forbidMetaRefresh.notify=false
+set! noscript.xss.notify=false
