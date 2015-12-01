@@ -48,13 +48,6 @@
 (set-terminal-coding-system 'iso-latin-1)
 
 
-;; Maximize the emacs screen
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
 
 ; Helm configuration
@@ -80,6 +73,39 @@
 (require 'init-evil)
 
 ; Color theme
-;(load-theme 'lush t)
-(load-theme 'wombat t)
+(load-theme 'flatland t)
+;(load-theme 'wombat t)
 
+; Change the line
+(add-to-list 'load-path "~/.emacs.d/vendor/emacs-powerline")
+(require 'powerline)
+;(powerline-evil-vim-color-theme)
+(setq powerline-arrow-shape 'arrow)   ;; the default
+(setq powerline-arrow-shape 'curve)   ;; give your mode-line curves
+(setq powerline-arrow-shape 'arrow14) ;; best for small fonts
+(set-face-attribute 'mode-line nil
+                    :foreground "Yellow"
+                    :background "DarkGreen"
+                    :box nil)
+
+;(custom-set-faces
+; '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+; '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+(setq powerline-color1 "grey22")
+(setq powerline-color2 "grey40")
+; Don't show the startup screen
+; Maximize the emacs screen
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(inhibit-startup-screen t)
+ '(initial-frame-alist (quote ((fullscreen . maximized)))))
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

@@ -324,8 +324,10 @@
 
 
 ; Org mode shortcuts
-(evil-define-key 'normal org-mode-map (kbd "C--") 'org-metaleft)
-(evil-define-key 'normal org-mode-map (kbd "C-+") 'org-metaright)
+;(evil-define-key 'normal org-mode-map (kbd "M") 'org-metaleft)
+;(evil-define-key 'normal org-mode-map (kbd "J") 'org-metadown)
+;(evil-define-key 'normal org-mode-map (kbd "K") 'org-metaup)
+;(evil-define-key 'normal org-mode-map (kbd "L") 'org-metaright)
 
 (evil-declare-key 'normal org-mode-map
                   "gh" 'outline-up-heading
@@ -333,7 +335,6 @@
                   "-" 'org-ctrl-c-minus ; change bullet style
                   "<" 'org-metaleft ; out-dent
                   ">" 'org-metaright ; indent
-                  "M-l" 'org-metaright ; indent
                   [tab] 'org-cycle)
 
 (setq evil-want-C-u-scroll t)
