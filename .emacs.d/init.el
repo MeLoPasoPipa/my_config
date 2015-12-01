@@ -4,7 +4,7 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
 ; list the packages you want
-(setq package-list '(evil evil-leader evil-tabs key-chord evil-matchit evil-jumper helm elscreen hl-line+ ))
+(setq package-list '(evil evil-leader evil-tabs key-chord evil-matchit evil-jumper helm elscreen hl-line+ flatland-theme))
 
 ; list the repositories containing them
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
