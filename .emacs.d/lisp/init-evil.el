@@ -42,7 +42,7 @@
 ; COLORS OF THE CURSOR
 ;; Set colors depending on the evil-state-cursor
 (setq evil-emacs-state-cursor '("red" box))
-(setq evil-normal-state-cursor '("green" box))
+(setq evil-normal-state-cursor '("brown" box))
 (setq evil-visual-state-cursor '("orange" box))
 (setq evil-insert-state-cursor '("blue" bar))
 (setq evil-replace-state-cursor '("violet" bar))

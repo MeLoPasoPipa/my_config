@@ -4,13 +4,14 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
 ; list the packages you want
-(setq package-list '(evil evil-leader evil-tabs key-chord evil-matchit evil-jumper helm elscreen hl-line+ flatland-theme))
+(setq package-list '(evil evil-leader evil-tabs key-chord evil-matchit evil-jumper helm elscreen hl-line+ flatland-theme powerline powerline-evil))
 
 ; list the repositories containing them
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
                          ("gnu" . "http://elpa.gnu.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")))
+ ;                        ("marmalade" . "http://marmalade-repo.org/packages/")
+))
 
 ; activate all the packages (in particular autoloads)
 (package-initialize)
@@ -78,8 +79,13 @@
 
 ; Change the line
 (add-to-list 'load-path "~/.emacs.d/vendor/emacs-powerline")
-(require 'powerline)
-;(powerline-evil-vim-color-theme)
+;(require 'powerline)
+;(powerline-evil-theme)
+(require 'powerline-evil)
+(powerline-evil-center-color-theme)
+
+(setq powerline-evil 'arrow)   ;; the default
+
 (setq powerline-arrow-shape 'arrow)   ;; the default
 (setq powerline-arrow-shape 'curve)   ;; give your mode-line curves
 (setq powerline-arrow-shape 'arrow14) ;; best for small fonts
@@ -108,4 +114,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(powerline-evil-normal-face ((t (:inherit powerline-evil-base-face :background "brown")))))
+
