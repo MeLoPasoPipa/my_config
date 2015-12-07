@@ -20,8 +20,8 @@
 (evil-leader/set-key "u" 'undo-tree-visualize)
 
 ; HELM movement
-(define-key evil-normal-state-map (kbd "C-m") 'helm-M-x)
 (define-key evil-normal-state-map (kbd "C-ñ") 'helm-mini)
+(define-key evil-normal-state-map (kbd "C-m") 'helm-M-x)
 
 (define-key evil-normal-state-map (kbd "C-p") 'projectile-commander)
 

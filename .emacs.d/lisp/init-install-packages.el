@@ -21,4 +21,4 @@
   (unless (package-installed-p package)
     (package-install package)))
 
-(require 'init-install-packages)
+(provide 'init-install-packages)

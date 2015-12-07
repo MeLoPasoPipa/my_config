@@ -3,12 +3,12 @@
 (setq emacs-load-start-time (current-time))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
-
 ; Install the required packages
 (require 'init-install-packages)
 
 ; Initialize the basic configuration of emacs
 (require 'init-misc)
+
 
 ; Helm configuration
 (require 'init-helm)
@@ -48,5 +48,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(powerline-evil-normal-face ((t (:inherit powerline-evil-base-face :background "brown")))))
+ '(powerline-evil-normal-face ((t (:inherit powerline-evil-base-face :background "brown"))))
+ )
 
