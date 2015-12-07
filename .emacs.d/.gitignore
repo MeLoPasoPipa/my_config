@@ -1,0 +1,8 @@
+# Compiled Object files
+*.elc
+
+# Folder where all installed packages are located
+elpa/
+
+
+auto-save-list/
